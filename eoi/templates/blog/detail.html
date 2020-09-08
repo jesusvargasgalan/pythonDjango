@@ -1,0 +1,13 @@
+{% extends "blog/base.html" %}
+
+{% block title %}
+    {{ block.super }} - {{ post.title }}
+{% endblock %}
+
+{% block content %}
+<div>
+	<p>⏰ {{ post.author.username }} at {{ post.published_date|date:"l, j F Y" }}</p>
+	<h2><a href="{% url 'blog.post_detail' post_slug=post.slug %}">{{ post.title|upper }}</a></h2>
+	<p>{{ post.text }}</p>
+</div>
+{% endblock %}

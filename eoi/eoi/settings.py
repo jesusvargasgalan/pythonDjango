@@ -25,7 +25,7 @@ SECRET_KEY = 'h*ddeh2hsr=mehg6drqvdu-5x97t9im)*vf3r0%a+39#sf-axb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['pythondjango--jesusvargasgala.repl.co']
+ALLOWED_HOSTS = ['pythondjango.jesusvargasgala.repl.co','pythondjango--jesusvargasgala.repl.co',]
 
 
 # Application definition
@@ -56,7 +56,9 @@ ROOT_URLCONF = 'eoi.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+       'DIRS': [
+            BASE_DIR / 'templates'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
